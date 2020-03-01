@@ -1,0 +1,25 @@
+@import "../../../../styles/color-variables";
+@import "../../../../styles/dimensions-variables";
+
+.header {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(222, 222, 222, 0.5);
+  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+  text-align: right;
+  padding-right: 15px;
+  transition: background-color 0.3s;
+}
+
+.profile-photo {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background-image: url(../../../../assets/img/user.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}

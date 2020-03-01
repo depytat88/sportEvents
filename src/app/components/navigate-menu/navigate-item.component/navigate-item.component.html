@@ -1,0 +1,12 @@
+<a routerLink="{{navigateItem.link}}"
+   [routerLinkActive]=activeIndicator
+   [routerLinkActiveOptions]="{exact:true}"
+   [@shakeItem]=state
+   (click)="shake($event)"
+   (@shakeItem.done)="shakeEnd()"
+   class="navigate-link">
+  <i class="fas {{navigateItem.icon}} navigate-icon"></i>
+  {{ navigateItem.title }}
+</a>
+
+
