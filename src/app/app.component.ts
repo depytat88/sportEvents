@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  toggleStatus = true;
+  isLeftBarOpened = true;
+  isReversedVariableLayout = false;
 
   toggleLeftBar(): void {
-    this.toggleStatus = !this.toggleStatus;
+    this.isLeftBarOpened = !this.isLeftBarOpened;
+  }
+
+  toggleVariableLayout(): void {
+    this.isReversedVariableLayout = !this.isReversedVariableLayout;
   }
 }

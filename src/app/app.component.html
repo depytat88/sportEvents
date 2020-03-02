@@ -1,6 +1,6 @@
 <div class="main-container">
   <aside class="left-bar"
-         [ngClass]="toggleStatus ? '_opened' : '_closed'">
+         [ngClass]="isLeftBarOpened ? '_opened' : '_closed'">
     <div class="toggle-block"
          (click)="toggleLeftBar()">
       <span class="logo"></span>
@@ -9,15 +9,22 @@
     <app-navigate-menu></app-navigate-menu>
   </aside>
 
-  <div class="content">
+  <div class="content-wrapper">
     <app-header></app-header>
 
-    <div class="app-content">
-<!--      <div class="events-line">-->
-<!--        fff-->
-<!--      </div>-->
+    <div class="variable-layout"
+         [ngClass]="{'_reverse' : isReversedVariableLayout}">
+      <span class="toggle-variable-layout"
+            (click)="toggleVariableLayout()">XXX</span>
+
+      <div class="history">
+        fff
+      </div>
+
       <div class="main-card-wrapper">
-        <router-outlet></router-outlet>
+        <div class="main-card">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
   </div>

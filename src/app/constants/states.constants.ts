@@ -1,7 +1,7 @@
 export class StatesConstants {
   static readonly HOME = {
     TITLE: 'Home',
-    LINK: '',
+    LINK: '/home',
   };
   static readonly NEWS = {
     TITLE: 'News',
