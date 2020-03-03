@@ -1,0 +1,9 @@
+@mixin default-backdrop {
+  background-color: rgba(222, 222, 222, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@mixin card {
+  @include default-backdrop;
+  border-radius: 5px;
+}

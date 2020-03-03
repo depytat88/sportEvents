@@ -1,12 +1,11 @@
-@import "../../../../styles/color-variables";
-@import "../../../../styles/dimensions-variables";
+@import "../../../../styles/variables/dimensions-variables";
+@import "../../../../styles/mixins";
 
 .header {
   position: relative;
-  height: 50px;
-  line-height: 50px;
-  background-color: rgba(222, 222, 222, 0.5);
-  box-shadow: 10px 0 10px rgba(0, 0, 0, 0.5);
+  height: $header-height;
+  line-height: $header-height;
+  @include default-backdrop;
   text-align: right;
   padding-right: 15px;
   transition: background-color 0.3s;
