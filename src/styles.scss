@@ -1,6 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
-@import "./styles/color-variables";
-@import "./styles/dimensions-variables";
+@import "styles/reset";
+@import "styles/variables/color-variables";
+@import "styles/variables/dimensions-variables";
+@import "styles/mixins";
 
 body {
   height: 100vh;
@@ -14,18 +15,4 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-ul,
-p {
-  margin: 0;
-}
-
-.main-container {
-  display: flex;
-  height: 100%;
-}
-
-.left-bar._closed .navigate-link {
-  font-size: 0;
 }

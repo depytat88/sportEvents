@@ -1,5 +1,5 @@
-@import "./../../../../styles/color-variables";
-@import "./../../../../styles/dimensions-variables";
+@import "../../../../styles/variables/color-variables";
+@import "../../../../styles/variables/dimensions-variables";
 
 .navigate-link {
   display: block;
@@ -9,7 +9,8 @@
   font-size: 18px;
   color: $black;
   text-decoration: none;
-  transition: opacity .3s, background-color .2s;
+  transition: opacity .3s,
+              background-color .2s;
   &._active {
     background-color: $grey-2;
   }
