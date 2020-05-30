@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NavigateItemModel } from "./navigate-item.model";
 import {
   trigger,
@@ -13,7 +13,6 @@ import {
   selector: 'app-navigate-item',
   templateUrl: './navigate-item.component.html',
   styleUrls: ['./navigate-item.component.scss'],
-  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('shakeItem', [

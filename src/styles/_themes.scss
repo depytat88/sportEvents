@@ -1,0 +1,30 @@
+.theme {
+  background-image: var(--app-bg-img);
+}
+
+.theme-day {
+  @extend .theme;
+  --app-bg-img: url("../../src/assets/img/app-day-bg.jpg");
+  --theme-toggle-shadow: 0 0 10px rgba(244, 255, 0, 0.5);
+  --theme-toggle-color: rgba(244, 255, 0, 1);
+  animation-name: themeToggleDay;
+  animation-duration: 1.3s;
+}
+.theme-night {
+  @extend .theme;
+  --app-bg-img: url("../../src/assets/img/app-night-bg.jpg");
+  --theme-toggle-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  --theme-toggle-color: #fff;
+  animation-name: themeToggleNight;
+  animation-duration: 1.3s;
+}
+
+@keyframes themeToggleDay {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes themeToggleNight {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

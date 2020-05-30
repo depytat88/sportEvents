@@ -1,4 +1,8 @@
-<div class="main-container">
+<div [ngClass]="{
+        'main-container': true,
+        'theme-day': currentTheme,
+        'theme-night': !currentTheme
+      }">
   <aside class="left-bar"
          [ngClass]="isLeftBarOpened ? '_opened' : '_closed'">
     <div class="toggle-block"

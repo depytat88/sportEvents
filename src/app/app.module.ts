@@ -7,6 +7,7 @@ import { HomeModule } from "./modules/home/home.module";
 import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
 import { ProfileModule } from "./modules/profile/profile.module";
 import { NewsModule } from "./modules/news/news.module";
+import {ThemeService} from "./services/theme.service";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { NewsModule } from "./modules/news/news.module";
     ProfileModule,
     NavigateMenuModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ThemeService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -1,0 +1,19 @@
+<div [ngClass]="{
+        'theme-toggle': true,
+        '_day': currentTheme,
+        '_night': !currentTheme
+      }"
+     (click)="toggleTheme()">
+  <lottie-animation-view *ngIf="currentTheme; else night"
+                          [options]="lottieConfig"
+                          [width]="36"
+                          [height]="36">
+  </lottie-animation-view>
+
+  <ng-template #night>
+    <lottie-animation-view [options]="lottieConfig"
+                           [width]="36"
+                           [height]="36">
+    </lottie-animation-view>
+  </ng-template>
+</div>
