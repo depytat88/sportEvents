@@ -10,6 +10,7 @@ body {
   background-color: #343434;
 }
 
-* {
+*,
+*:before {
   box-sizing: border-box;
 }

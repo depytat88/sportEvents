@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import { ThemeService } from "./services/theme.service";
+import { LayoutService } from "./services/layout.service";
 
 @Component({
   selector: 'app-root',
@@ -13,18 +14,18 @@ export class AppComponent {
 
   constructor(
     private themeService: ThemeService,
+    private layoutService: LayoutService,
   ) {};
 
   get currentTheme(): boolean {
-    console.error(this.themeService.currentTheme);
     return this.themeService.currentTheme;
+  }
+
+  get currentLayout(): boolean {
+    return this.layoutService.currentLayout;
   }
 
   toggleLeftBar(): void {
     this.isLeftBarOpened = !this.isLeftBarOpened;
-  }
-
-  toggleVariableLayout(): void {
-    this.isReversedVariableLayout = !this.isReversedVariableLayout;
   }
 }

@@ -1,0 +1,9 @@
+<div class="layout-toggle">
+  <div class="layout-toggle__btn _left"
+       [ngClass]="{'_disabled' : currentLayout}"
+       (click)="toggleLayout()"></div>
+
+  <div class="layout-toggle__btn _right"
+       [ngClass]="{'_disabled' : !currentLayout}"
+       (click)="toggleLayout()"></div>
+</div>

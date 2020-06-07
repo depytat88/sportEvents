@@ -17,10 +17,7 @@
     <app-header></app-header>
 
     <div class="variable-layout"
-         [ngClass]="{'_reverse' : isReversedVariableLayout}">
-      <span class="toggle-variable-layout"
-            (click)="toggleVariableLayout()">XXX</span>
-
+         [ngClass]="{'_reverse' : !currentLayout}">
       <div class="history">
         fff
       </div>

@@ -7,22 +7,8 @@
   cursor: pointer;
   user-select: none;
   box-shadow: var(--theme-toggle-shadow);
-  //&._day {
-  //  box-shadow: 0 0 10px rgba(244, 255, 0, 0.5);
-  //}
-  //
-  //&._night {
-  //  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  //}
 }
 
 :host /deep/ .theme-toggle path {
   stroke: var(--theme-toggle-color);
-  //&._day path {
-  //  stroke: rgba(244, 255, 0, 1);
-  //}
-  //
-  //&._night path {
-  //  stroke: #fff;
-  //}
 }

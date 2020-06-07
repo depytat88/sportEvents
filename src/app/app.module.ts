@@ -7,7 +7,8 @@ import { HomeModule } from "./modules/home/home.module";
 import { NavigateMenuModule } from "./components/navigate-menu/navigate-menu.module";
 import { ProfileModule } from "./modules/profile/profile.module";
 import { NewsModule } from "./modules/news/news.module";
-import {ThemeService} from "./services/theme.service";
+import { ThemeService } from "./services/theme.service";
+import { LayoutService } from "./services/layout.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import {ThemeService} from "./services/theme.service";
     ProfileModule,
     NavigateMenuModule,
   ],
-  providers: [ ThemeService ],
+  providers: [
+    ThemeService,
+    LayoutService,
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

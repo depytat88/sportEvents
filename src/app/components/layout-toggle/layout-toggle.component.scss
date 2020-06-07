@@ -1,0 +1,45 @@
+.layout-toggle {
+  display: flex;
+}
+
+.layout-toggle__btn {
+  $layout-column-emulator: 3px solid cornsilk;
+  $layout-content-emulator: 18px solid rgba(211, 211, 211, 0.4);
+
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  border: 1px solid #dfdfdf;
+  border-radius: 6px;
+  font-size: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s,
+              background-color 0.3s;
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    vertical-align: middle;
+  }
+
+  &._left:before {
+    border-right: $layout-content-emulator;
+    border-left: $layout-column-emulator;
+  }
+
+  &._right:before {
+    border-right: $layout-column-emulator;
+    border-left: $layout-content-emulator;
+  }
+
+  &._disabled {
+    pointer-events: none;
+    box-shadow: 0 0 7px #fff;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
