@@ -1,21 +1,47 @@
+@import "../../../styles/variables/color-variables";
+@import "../../../styles/variables/dimensions-variables";
+
+$layout-toggle-btn-size: 36px;
+$layout-toggle-btn-margin: 5px;
+$layout-toggle-active-indicator-offset: calc(#{-$header-height} / 2 + #{$layout-toggle-btn-size} / 2);
+
 .layout-toggle {
+  position: relative;
   display: flex;
+  &:before {
+    content: '';
+    position: absolute;
+    top: $layout-toggle-active-indicator-offset;
+    bottom: $layout-toggle-active-indicator-offset;
+    left: $layout-toggle-btn-margin;
+    display: block;
+    width: $layout-toggle-btn-size;
+    box-shadow: 0 0 10px $white;
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    transition: left 0.15s ease-in;
+  }
+
+  &._reversed {
+    &:before {
+      left: calc(#{$layout-toggle-btn-margin}*3 + #{$layout-toggle-btn-size});
+    }
+  }
 }
 
 .layout-toggle__btn {
   $layout-column-emulator: 3px solid cornsilk;
   $layout-content-emulator: 18px solid rgba(211, 211, 211, 0.4);
 
-  width: 36px;
-  height: 36px;
+  width: $layout-toggle-btn-size;
+  height: $layout-toggle-btn-size;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 5px;
+  margin: 0 $layout-toggle-btn-margin;
   border: 1px solid #dfdfdf;
   border-radius: 6px;
   font-size: 0;
-  text-align: center;
   cursor: pointer;
   transition: box-shadow 0.3s,
               background-color 0.3s;
@@ -24,7 +50,7 @@
     display: inline-block;
     width: 26px;
     height: 26px;
-    vertical-align: middle;
+    transition: height 0.3s;
   }
 
   &._left:before {
@@ -39,7 +65,9 @@
 
   &._disabled {
     pointer-events: none;
-    box-shadow: 0 0 7px #fff;
     background-color: rgba(255, 255, 255, 0.4);
+    &:before {
+      height: 22px;
+    }
   }
 }

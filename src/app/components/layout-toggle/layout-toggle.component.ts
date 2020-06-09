@@ -14,8 +14,6 @@ export class LayoutToggleComponent {
   ) {};
 
   get currentLayout(): boolean {
-    console.error('this.layoutService.currentLayout');
-    console.error(this.layoutService.currentLayout);
     return this.layoutService.currentLayout;
   }
 
