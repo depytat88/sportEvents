@@ -7,6 +7,8 @@ $logo-color: $white;
   justify-content: flex-end;
   align-items: center;
   height: 100%;
+  padding-right: 20px;
+  transition: padding-right 0.3s;
 }
 
 .logo-text {
@@ -29,7 +31,13 @@ $logo-color: $white;
   }
 }
 
-:host-context(.left-bar._closed) .logo-text {
-  opacity: 0;
-  font-size: 0;
+:host-context(.left-bar._closed) {
+  .logo {
+    padding-right: 10px;
+  }
+
+  .logo-text {
+    opacity: 0;
+    font-size: 0;
+  }
 }

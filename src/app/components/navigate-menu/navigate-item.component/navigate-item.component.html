@@ -2,11 +2,17 @@
    [routerLinkActive]=activeIndicator
    [routerLinkActiveOptions]="{exact:true}"
    [@shakeItem]=state
-   (click)="shake($event)"
+   (click)="onNavItemClick($event)"
    (@shakeItem.done)="shakeEnd()"
    class="navigate-link">
-  <i class="fas {{navigateItem.icon}} navigate-icon"></i>
-  {{ navigateItem.title }}
+  <span class="navigate-text">
+    {{ navigateItem.title }}
+  </span>
+<!--  <i class="fas {{navigateItem.icon}} navigate-icon"></i>-->
+  <lottie-animation-view class="navigate-icon"
+                         [options]="lottieConfig"
+                         [width]="22"
+                         [height]="22"
+                         (animCreated)="handleIconAnimation($event)">
+  </lottie-animation-view>
 </a>
-
-

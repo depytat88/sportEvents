@@ -8,6 +8,9 @@ import {
   transition,
   keyframes,
 } from '@angular/animations';
+import { LottiConfigModel } from "../../../models/lotti-config.model";
+import { IconsConstants } from "../../../constants/icons.constants";
+import { LottiConstants } from "../../../constants/lotti.constants";
 
 @Component({
   selector: 'app-navigate-item',
@@ -44,8 +47,23 @@ import {
 export class NavigateItemComponent {
   @Input() navigateItem: NavigateItemModel;
 
+  private iconAnimation: any;
   state: string;
   activeIndicator = '_active';
+
+  get lottieConfig(): any {
+    return new LottiConfigModel(
+      `../../assets/animated-icons/icons8/${this.navigateItem.icon}`,
+      LottiConstants.Renderer.SVG,
+      true,
+      false,
+    );
+  }
+
+  onNavItemClick(event: Event): void {
+    this.shake(event);
+    this.playIconAnimation();
+  }
 
   shake(event: Event): void {
     const element = event.currentTarget as HTMLElement;
@@ -57,5 +75,14 @@ export class NavigateItemComponent {
 
   shakeEnd(): void {
     this.state = 'shake-end';
+  }
+
+  handleIconAnimation(animation: any) {
+    this.iconAnimation = animation;
+  }
+
+  playIconAnimation() {
+    this.iconAnimation.stop();
+    this.iconAnimation.play();
   }
 }

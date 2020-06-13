@@ -5,17 +5,17 @@ import { StatesConstants } from "./states.constants";
 export class NavListConstants {
   static readonly NavList = [
     new NavigateItemModel(
-      IconsConstants.FONT_AWESOME_ICONS.HOME,
+      IconsConstants.ANIMATED_ICONS.HOME,
       StatesConstants.HOME.TITLE,
       StatesConstants.HOME.LINK,
     ),
     new NavigateItemModel(
-      IconsConstants.FONT_AWESOME_ICONS.HISTORY,
+      IconsConstants.ANIMATED_ICONS.NEWS,
       StatesConstants.NEWS.TITLE,
       StatesConstants.NEWS.LINK,
     ),
     new NavigateItemModel(
-      IconsConstants.FONT_AWESOME_ICONS.PROFILE,
+      IconsConstants.ANIMATED_ICONS.SETTINGS,
       StatesConstants.PROFILE.TITLE,
       StatesConstants.PROFILE.LINK,
     ),

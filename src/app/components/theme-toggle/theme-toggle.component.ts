@@ -28,8 +28,8 @@ export class ThemeToggleComponent {
 
   getThemeIcon(): any {
     return this.currentTheme ?
-      IconsConstants.ANIMATED_ICONS.DAY_ICON :
-      IconsConstants.ANIMATED_ICONS.NIGHT_ICON;
+      IconsConstants.ANIMATED_ICONS.DAY :
+      IconsConstants.ANIMATED_ICONS.NIGHT;
   }
 
   toggleTheme(): void {

@@ -16,9 +16,7 @@
   width: 100%;
   height: $header-height;
   background: #97a0e5;
-  padding-right: 20px;
   cursor: pointer;
-  transition: padding-right 0.3s;
 }
 
 .left-bar {
@@ -35,9 +33,6 @@
   &._closed {
     width: 50px;
     min-width: 50px;
-    .toggle-block {
-      padding-right: 10px;
-    }
   }
 }
 

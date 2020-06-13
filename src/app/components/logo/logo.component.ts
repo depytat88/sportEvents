@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LottiConfigModel } from "../../models/lotti-config.model";
 import { LottiConstants } from "../../constants/lotti.constants";
 import { CommonConstants } from "../../constants/common.constants";
+import {IconsConstants} from "../../constants/icons.constants";
 
 @Component({
   selector: 'app-logo',
@@ -15,7 +16,7 @@ export class LogoComponent {
 
   get lottieConfig(): any {
     return new LottiConfigModel(
-      `../../assets/animated-icons/icons8/alarm-logo.json`,
+      `../../assets/animated-icons/icons8/${IconsConstants.ANIMATED_ICONS.LOGO}`,
       LottiConstants.Renderer.SVG,
       true,
       false,
