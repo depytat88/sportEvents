@@ -5,6 +5,7 @@
 .theme-day {
   @extend .theme;
   --app-bg-img: url("../../src/assets/img/app-day-bg.jpg");
+  --left-bar-toggle-bg-color: #97a0e5;
   --theme-toggle-shadow: 0 0 10px rgba(244, 255, 0, 0.5);
   --theme-toggle-color: rgba(244, 255, 0, 1);
   animation-name: themeToggleDay;
@@ -13,6 +14,7 @@
 .theme-night {
   @extend .theme;
   --app-bg-img: url("../../src/assets/img/app-night-bg.jpg");
+  --left-bar-toggle-bg-color: #3c3c3c;
   --theme-toggle-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   --theme-toggle-color: #fff;
   animation-name: themeToggleNight;
