@@ -10,7 +10,6 @@ import { LayoutService } from "./services/layout.service";
 })
 export class AppComponent {
   isLeftBarOpened = true;
-  isReversedVariableLayout = false;
 
   constructor(
     private themeService: ThemeService,

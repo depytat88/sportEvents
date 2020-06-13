@@ -9,6 +9,7 @@ import { ProfileModule } from "./modules/profile/profile.module";
 import { NewsModule } from "./modules/news/news.module";
 import { ThemeService } from "./services/theme.service";
 import { LayoutService } from "./services/layout.service";
+import { LogoModule } from "./components/logo/logo.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LayoutService } from "./services/layout.service";
     NewsModule,
     ProfileModule,
     NavigateMenuModule,
+    LogoModule,
   ],
   providers: [
     ThemeService,

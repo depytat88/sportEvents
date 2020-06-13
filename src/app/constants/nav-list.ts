@@ -1,6 +1,6 @@
-import {NavigateItemModel} from "../components/navigate-menu/navigate-item.component/navigate-item.model";
-import {IconsConstants} from "./icons.constants";
-import {StatesConstants} from "./states.constants";
+import { NavigateItemModel } from "../components/navigate-menu/navigate-item.component/navigate-item.model";
+import { IconsConstants } from "./icons.constants";
+import { StatesConstants } from "./states.constants";
 
 export class NavListConstants {
   static readonly NavList = [

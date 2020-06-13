@@ -1,0 +1,35 @@
+@import "../../../styles/variables/color-variables";
+
+$logo-color: $white;
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-text {
+  color: $logo-color;
+  transition: opacity 0.3s,
+              font-size 0.3s;
+}
+
+.logo-icon {
+  margin-left: 10px;
+}
+
+:host /deep/  {
+  svg {
+    margin-bottom: 3px;
+  }
+
+  path {
+    stroke: $logo-color;
+  }
+}
+
+:host-context(.left-bar._closed) .logo-text {
+  opacity: 0;
+  font-size: 0;
+}

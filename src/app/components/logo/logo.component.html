@@ -1,0 +1,13 @@
+<div class="logo"
+     (click)="playAnimation()">
+  <span class="logo-text">
+    {{ commonConstants.LogoText }}
+  </span>
+
+  <lottie-animation-view class="logo-icon"
+                         [options]="lottieConfig"
+                         [width]="30"
+                         [height]="30"
+                         (animCreated)="handleAnimation($event)">
+  </lottie-animation-view>
+</div>
