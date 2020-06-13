@@ -16,7 +16,6 @@ $layout-toggle-active-indicator-offset: calc(#{-$header-height} / 2 + #{$layout-
     left: $layout-toggle-btn-margin;
     display: block;
     width: $layout-toggle-btn-size;
-    box-shadow: 0 0 10px $white;
     border-bottom: 2px solid $white;
     transition: left 0.15s ease-in;
   }
