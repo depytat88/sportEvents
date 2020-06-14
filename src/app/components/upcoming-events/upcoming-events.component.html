@@ -1,0 +1,23 @@
+<ul class="events">
+  <li *ngFor="let event of eventsList"
+      class="event">
+    <div class="event_header"
+         [ngClass]="setColorIndicatorClass(event.type)">
+      <span class="event_icon"></span>
+    </div>
+
+    <div class="event_body">
+      <div>
+        {{ event.title }}
+      </div>
+
+      <div>
+        {{ event.date }}
+      </div>
+
+      <div>
+        {{ event.time }}
+      </div>
+    </div>
+  </li>
+</ul>

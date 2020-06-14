@@ -56,21 +56,23 @@
       padding-left: 0;
     }
 
-    .history {
+    .moving-panel {
       animation-name: collapseHistoryRight;
       animation-duration: 0.3s;
     }
   }
 
-  .history {
+  .moving-panel {
     animation-name: collapseHistoryLeft;
     animation-duration: 0.3s;
   }
 }
 
-.history {
-  width: 200px;
+.moving-panel {
+  width: $moving-panel-width;
+  min-width: $moving-panel-width;
   @include card;
+  overflow-x: hidden;
   transition: min-width 0.3s,
               width 0.3s;
 }
@@ -86,11 +88,11 @@
 }
 
 @keyframes collapseHistoryLeft {
-  from {width: 0; opacity: 0}
-  to {width: 200px; opacity: 1}
+  from {width: 0; min-width: 0; opacity: 0}
+  to {width: 200px; min-width: 200px; opacity: 1}
 }
 
 @keyframes collapseHistoryRight {
-  from {width: 0; opacity: 0}
-  to {width: 200px; opacity: 1}
+  from {width: 0; min-width: 0; opacity: 0}
+  to {width: 200px; min-width: 200px; opacity: 1}
 }
