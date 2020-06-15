@@ -14,6 +14,7 @@ import { UpcomingEventsModule } from "./components/upcoming-events/upcoming-even
 import { EventsManutdService } from "./services/events-manutd.service";
 import { HttpService } from "./services/http.service";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { SvgSpriteModule } from "./components/svg-sprite/svg-sprite.module";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SvgSpriteModule,
     HeaderModule,
     UpcomingEventsModule,
     HomeModule,

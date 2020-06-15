@@ -29,18 +29,18 @@ export class UpcomingEventsComponent implements OnDestroy {
     this.eventsCommonService.dispose();
   }
 
-  setColorIndicatorClass(eventType: string): string {
+  setIndicatorClass(eventType: string, withUnderscore= false): string {
     let className = '';
 
     switch (eventType) {
       case EventConstants.TYPES.FOOTBALL:
-        className = "_football";
+        className = withUnderscore ? "_football" : "football";
         break;
       case EventConstants.TYPES.UFC:
-        className = "_ufc";
+        className = withUnderscore ? "_ufc" : "ufc";
         break;
       case EventConstants.TYPES.BOXING:
-        className = "_boxing";
+        className = withUnderscore ? "_boxing" : "boxing";
         break;
     }
 

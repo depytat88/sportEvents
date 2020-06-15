@@ -2,8 +2,10 @@
   <li *ngFor="let event of eventsList"
       class="event">
     <div class="event_header"
-         [ngClass]="setColorIndicatorClass(event.type)">
-      <span class="event_icon"></span>
+         [ngClass]="setIndicatorClass(event.type, true)">
+      <span class="event_icon">
+        <app-svg [svgId]="setIndicatorClass(event.type)"></app-svg>
+      </span>
     </div>
 
     <div class="event_body">
@@ -17,6 +19,51 @@
 
       <div>
         {{ event.time }}
+      </div>
+    </div>
+  </li>
+
+  <li *ngFor="let event of eventsList"
+      class="event">
+    <div class="event_header _boxing">
+      <span class="event_icon">
+        <app-svg [svgId]="'boxing'"></app-svg>
+      </span>
+    </div>
+
+    <div class="event_body">
+      <div>
+        XXXX
+      </div>
+
+      <div>
+        XXXX
+      </div>
+
+      <div>
+        XXX
+      </div>
+    </div>
+  </li>
+
+  <li class="event">
+    <div class="event_header _ufc">
+      <span class="event_icon">
+        <app-svg [svgId]="'ufc'"></app-svg>
+      </span>
+    </div>
+
+    <div class="event_body">
+      <div>
+        XXXX
+      </div>
+
+      <div>
+        XXXX
+      </div>
+
+      <div>
+        XXXX
       </div>
     </div>
   </li>
