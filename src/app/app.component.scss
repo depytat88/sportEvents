@@ -85,6 +85,7 @@
 .main-card {
   height: 100%;
   @include card;
+  padding: 15px;
 }
 
 @keyframes collapseHistoryLeft {
