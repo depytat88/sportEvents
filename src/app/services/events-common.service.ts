@@ -1,15 +1,15 @@
-import { ChangeDetectorRef, Injectable } from "@angular/core";
-import { EventModel } from "../models/event.model";
-import { EventsManutdService } from "./events-manutd.service";
-import { HttpService } from "./http.service";
+import { ChangeDetectorRef, Injectable } from '@angular/core';
+import { EventModel } from '../models/event.model';
+import { EventsManutdService } from './events-manutd.service';
+import { HttpService } from './http.service';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class EventsCommonService {
   events: EventModel[] = [];
   subscriptions: any[] = [];
 
   constructor(
-    readonly eventsManutdService:  EventsManutdService,
+    readonly eventsManutdService: EventsManutdService,
     private httpService: HttpService,
     private cdr: ChangeDetectorRef
   ) {
@@ -20,6 +20,6 @@ export class EventsCommonService {
   }
 
   dispose() {
-    this.subscriptions.forEach(subscription =>subscription.unsubscribe());
+    this.subscriptions.forEach(subscription => subscription.unsubscribe());
   }
 }

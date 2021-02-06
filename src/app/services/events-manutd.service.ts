@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { EventModel } from "../models/event.model";
-import { HttpService } from "./http.service";
-import { Subject } from "rxjs";
-import { HttpConstants } from "../constants/http.constants";
-import { EventConstants } from "../constants/event.constants";
+import { Injectable } from '@angular/core';
+import { EventModel } from '../models/event.model';
+import { HttpService } from './http.service';
+import { Subject } from 'rxjs';
+import { HttpConstants } from '../constants/http.constants';
+import { EventConstants } from '../constants/event.constants';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class EventsManutdService {
   events: EventModel[] = [];
   changeManutdEvents: Subject<EventModel[]> = new Subject<EventModel[]>();

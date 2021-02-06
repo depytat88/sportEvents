@@ -10,9 +10,13 @@
   --theme-toggle-color: rgba(244, 255, 0, 1);
   //--football-color: #7ade7a;
   --football-color: #78cb61;
+  --football-calendar-text-color: #fff;
   //--boxing-color: #fffb79;
   --boxing-color: #ecbf4c;
   --ufc-color: #e86161;
+  --calendar-weekend-color: rgba(196, 98, 93, 0.8);
+  --calendar-today-bg-color: rgba(255, 220, 40, 0.55);
+  --calendar-today-font-color: rgba(255, 220, 40, 0.55);
   animation-name: themeToggleDay;
   animation-duration: 1.3s;
 }
@@ -23,8 +27,12 @@
   --theme-toggle-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   --theme-toggle-color: #fff;
   --football-color: #fff;
+  --football-calendar-text-color: #3c3c3c;
   --boxing-color: #c7c7c7;
   --ufc-color: #525252;
+  --calendar-weekend-color: rgb(60, 60, 60, 0.8);
+  --calendar-today-bg-color: rgba(255, 220, 40, 0.55);
+  --calendar-today-font-color: rgba(255, 220, 40, 0.55);
   animation-name: themeToggleNight;
   animation-duration: 1.3s;
 }

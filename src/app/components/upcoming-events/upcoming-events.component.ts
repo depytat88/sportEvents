@@ -3,9 +3,9 @@ import {
   Component,
   OnDestroy,
 } from '@angular/core';
-import { EventsCommonService } from "../../services/events-common.service";
-import { EventModel } from "../../models/event.model";
-import { EventConstants } from "../../constants/event.constants";
+import { EventsCommonService } from '../../services/events-common.service';
+import { EventModel } from '../../models/event.model';
+import { EventConstants } from '../../constants/event.constants';
 
 @Component({
   selector: 'app-upcoming-events',
@@ -25,7 +25,7 @@ export class UpcomingEventsComponent implements OnDestroy {
     return this.eventsCommonService.events;
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.eventsCommonService.dispose();
   }
 
@@ -34,13 +34,13 @@ export class UpcomingEventsComponent implements OnDestroy {
 
     switch (eventType) {
       case EventConstants.TYPES.FOOTBALL:
-        className = withUnderscore ? "_football" : "football";
+        className = withUnderscore ? '_football' : 'football';
         break;
       case EventConstants.TYPES.UFC:
-        className = withUnderscore ? "_ufc" : "ufc";
+        className = withUnderscore ? '_ufc' : 'ufc';
         break;
       case EventConstants.TYPES.BOXING:
-        className = withUnderscore ? "_boxing" : "boxing";
+        className = withUnderscore ? '_boxing' : 'boxing';
         break;
     }
 

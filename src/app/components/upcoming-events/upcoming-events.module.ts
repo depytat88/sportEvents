@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { UpcomingEventsComponent } from "./upcoming-events.component";
-import { CommonModule } from "@angular/common";
-import { SvgModule } from "../svg/svg.module";
+import { UpcomingEventsComponent } from './upcoming-events.component';
+import { CommonModule } from '@angular/common';
+import { SvgModule } from '../svg/svg.module';
 
 @NgModule({
   imports: [
