@@ -24,7 +24,7 @@ export class EventsManutdService {
     ).subscribe(
       data => {
         console.error(data);
-        data.events.map( it => this.events.push(
+        data.results.map( it => this.events.push(
           new EventModel(
             it.strEvent,
             EventConstants.TYPES.FOOTBALL,

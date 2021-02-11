@@ -16,7 +16,14 @@ import { HttpService } from './services/http.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SvgSpriteModule } from './components/svg-sprite/svg-sprite.module';
 import { EventsCommonService } from './services/events-common.service';
+import player from 'lottie-web';
+import { LottieModule } from 'ngx-lottie';
 
+// Note we need a separate function as it's required
+// by the AOT compiler.
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
@@ -34,6 +41,10 @@ import { EventsCommonService } from './services/events-common.service';
     NavigateMenuModule,
     LogoModule,
     HttpClientModule,
+    LottieModule.forRoot({
+      player: playerFactory,
+      useCache: true,
+    }),
   ],
   providers: [
     HttpService,

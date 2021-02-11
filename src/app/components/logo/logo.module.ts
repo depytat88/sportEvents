@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { LogoComponent } from "./logo.component";
-import { LottieAnimationViewModule } from "ng-lottie";
+import { LottieModule } from 'ngx-lottie';
 
 @NgModule({
-  imports: [
-    LottieAnimationViewModule,
-  ],
+  imports: [ LottieModule ],
   declarations: [ LogoComponent ],
   exports: [ LogoComponent ]
 })

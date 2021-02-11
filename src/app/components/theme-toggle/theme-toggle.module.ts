@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { ThemeToggleComponent } from "./theme-toggle.component";
 import { CommonModule } from "@angular/common";
-import { LottieAnimationViewModule } from "ng-lottie";
+import { LottieModule } from 'ngx-lottie';
 
 @NgModule({
   imports: [
     CommonModule,
-    LottieAnimationViewModule,
+    LottieModule,
   ],
   declarations: [ ThemeToggleComponent ],
   exports: [ ThemeToggleComponent ]

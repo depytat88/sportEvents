@@ -4,16 +4,15 @@
         '_night': !currentTheme
       }"
      (click)="toggleTheme()">
-  <lottie-animation-view *ngIf="currentTheme; else night"
-                          [options]="lottieConfig"
-                          [width]="36"
-                          [height]="36">
-  </lottie-animation-view>
+
+  <ng-lottie *ngIf="currentTheme; else night"
+             [options]="lottieConfig"
+             width="36px"
+             height="36px"></ng-lottie>
 
   <ng-template #night>
-    <lottie-animation-view [options]="lottieConfig"
-                           [width]="36"
-                           [height]="36">
-    </lottie-animation-view>
+    <ng-lottie [options]="lottieConfig"
+               width="36px"
+               height="36px"></ng-lottie>
   </ng-template>
 </div>

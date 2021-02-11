@@ -8,11 +8,10 @@
   <span class="navigate-text">
     {{ navigateItem.title }}
   </span>
-<!--  <i class="fas {{navigateItem.icon}} navigate-icon"></i>-->
-  <lottie-animation-view class="navigate-icon"
-                         [options]="lottieConfig"
-                         [width]="22"
-                         [height]="22"
-                         (animCreated)="handleIconAnimation($event)">
-  </lottie-animation-view>
+
+  <ng-lottie class="navigate-icon"
+             [options]="lottieConfig"
+             width="22px"
+             height="22px"
+             (animationCreated)="handleIconAnimation($event)"></ng-lottie>
 </a>
