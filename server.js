@@ -10,9 +10,9 @@ app.use(express.static(__dirname + '/dist/sportEvents'));
 app.listen(process.env.PORT || 4200);
 
 app.get('/assets', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/assets'));
+  res.sendFile(path.join(__dirname + '/dist/sportEvents/assets'));
 });
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/sportEvents/index.html'));
 });

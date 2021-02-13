@@ -18,7 +18,7 @@ const routes: Routes = [
     component: ProfileComponent,
   },
   {
-    path: '',
+    path: '**',
     redirectTo: '/home',
     pathMatch: 'full'
   },
